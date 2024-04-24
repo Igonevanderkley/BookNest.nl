@@ -27,8 +27,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            ['username' => 'admin','roleId' => 1, 'email' => 'admin@gmail.com', 'password' => bcrypt('password')],
-            ['username' => 'user', 'roleId' => 2, 'email' => 'user@gmail.com', 'password' => bcrypt('password')],
+            ['username' => 'admin', 'adress' => 'Straatlaan 89', 'zipCode' => '4158 EB', 'roleId' => 1, 'email' => 'admin@gmail.com', 'password' => bcrypt('password')],
+            ['username' => 'user', 'roleId' => 2, 'adress' => 'Laanweg 56', 'zipCode' => '8011 PK', 'email' => 'user@gmail.com', 'password' => bcrypt('password')],
         ]);
 
         DB::table('books')->insert([
@@ -41,11 +41,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('orders')->insert([
-            ['userId' => 1, 'orderDate' => now(), 'totalQuantity' => 3],
-            ['userId' => 2, 'orderDate' => now()->subDays(2), 'totalQuantity' => 2],
-            ['userId' => 3, 'orderDate' => now()->subDays(5), 'totalQuantity' => 1],
-            ['userId' => 4, 'orderDate' => now()->subDays(7), 'totalQuantity' => 4],
-            ['userId' => 5, 'orderDate' => now()->subDays(10), 'totalQuantity' => 2],
+            ['userId' => 1, 'adress' => 'Straatlaan 89', 'zipCode' => '4158 EB', 'orderDate' => now(), 'totalQuantity' => 3],
+            ['userId' => 2, 'adress' => 'Laanweg 56', 'zipCode' => '8011 PK', 'orderDate' => now()->subDays(2), 'totalQuantity' => 2],
+            ['userId' => 1, 'adress' => 'Straatlaan 89', 'zipCode' => '4158 EB', 'orderDate' => now()->subDays(5), 'totalQuantity' => 1],
+            ['userId' => 1, 'adress' => 'Straatlaan 89', 'zipCode' => '4158 EB', 'orderDate' => now()->subDays(7), 'totalQuantity' => 4],
+            ['userId' => 2, 'adress' => 'Laanweg 56', 'zipCode' => '8011 PK', 'orderDate' => now()->subDays(10), 'totalQuantity' => 2],
         ]);
 
         DB::table('orderItems')->insert([
