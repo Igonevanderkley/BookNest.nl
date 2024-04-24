@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('userId');
             $table->dateTime('orderDate');
+            $table->string('adress');
+            $table->string('zipCode');
             $table->integer('totalQuantity');
             $table->timestamps();
         });
